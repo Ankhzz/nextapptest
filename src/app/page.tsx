@@ -1,10 +1,20 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { ConnectButton } from "thirdweb/react";
+import { client } from "./client";
+import { createWallet } from "thirdweb/wallets";
 
-export default function Home() {
+
+
+export default function Home() {  
+    
   return (
     <main className={styles.main}>
       <div className={styles.description}>
+        <ConnectButton
+          client={client}          
+        />
+        
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
